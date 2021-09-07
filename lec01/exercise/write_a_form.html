@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <link rel = "stylesheet" type = "text/css" href = "css\style.css" />
+        <title>Fill the album form</title>
+    </head>
+
+    <body>
+        <form>
+            <label>Name:</label>
+            <input type="text" name="name"><br><br>
+            
+            <label>Release year:</label>
+            <input type="number" name="release_date"><br><br>
+            
+            <label>Select artist:</label>
+            <select name="artist" id="artist">
+                <option value="alex">Alex</option>
+                <option value="max">Max</option>
+                <option value="mikkel">Mikkel</option>
+            </select><br><br>
+            
+            <label>Select song type:</label><br>
+            <label>Single</label>
+            <input type="radio" id="single" name="song_type" value="single"><br>
+            <label>EP</label>
+            <input type="radio" id="ep" name="song_type" value="ep"><br>
+            <label>Album</label>
+            <input type="radio" id="album" name="song_type" value="album"><br><br>
+
+            <label>Description:</label><br>
+            <textarea id="description_text_area" name="description" rows="3" cols="60"></textarea><br><br>
+
+            <label>Tracks</label>
+            <input type="number" name="tracks" min="1" max="10">
+
+        </form>
+    </body>
+</html>
