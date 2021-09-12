@@ -13,7 +13,7 @@ You can see a tutorial on how to use the Live Server [here](https://www.youtube.
 
 Finally we also suggest the use of [PhpStorm](https://www.jetbrains.com/phpstorm/), a JetBrains PHP, HTML and JavaScript IDE.
 In this course we are going to see PHP, HTML and JavaScript; PhpStorm is built specifically to support this technologies.
-Nevertheless, any good editor or IDE is going to work with these technologies. You can enable the same functionality of Live Server by isntalling the [Live Edit extension](https://plugins.jetbrains.com/plugin/7007-live-edit)
+Nevertheless, any good editor or IDE is going to work with these technologies. You can enable the same functionality of Live Server by installing the [Live Edit extension](https://plugins.jetbrains.com/plugin/7007-live-edit)
 
 We do not force you which tools you want to use.
 We suggest you to find an editor that suits you and learn it well: *The editor should be an extension of your hand...* (From 'The Pragmatic Programmer' by Andrew Hunt and Davit Thomas)
@@ -30,7 +30,7 @@ For every album, the form should ask a user for:
 * Artist: selected from a list of options
 * Type: single (single song), EP (not enough to be considered a full album), album
 * Description: text area
-* Tracks: text, max 10
+* Tracks: text, only 10 inputs
 
 Use [w3school](https://www.w3schools.com/html/html_forms.asp) for references about form inputs.
 There are more HTML tag that can be used with forms that are not input: *hint* [textarea](https://www.w3schools.com/tags/tag_textarea.asp).
@@ -44,6 +44,9 @@ Here is an example of part of the form:
 ![Example Form](examples/images/form.png)
 
 *Why does the form not look like the example image?*
+
+In this example, we only allow for an album to have 10 tracks, not more or less.
+*Is it possible to have any number of tracks? How?*
 
 ## Exercise: add style
 
