@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">    <!-- specifies encoding -->
+    <title>Album library</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+      <h1>New Album</h1>
+      <form action="/create.php" method="POST">
+          <div class='grid'>
+            <label> Name: </label>
+            <input type="text" name="name" id="name" class="inputForm"/>
+          </div>
+          <div class='grid'>
+            <label> Year: </label>
+            <input type="number" name="year" id="year" class="inputForm"/>
+          </div>
+          <div class='grid'>
+            <label> Artist: </label>
+            <select name="artist" id="artist" class="inputForm">
+              <option value="matt_elliott">Matt Elliott</option>
+              <option value="low_roar">Low Roar</option>
+              <option value="mum">Múm</option>
+            </select>
+          </div>
+          <div>
+            <input type="radio" id="single" name="type" value="single">
+            <label for="single">Single</label>
+            <input type="radio" id="ep" name="type" value="ep">
+            <label for="ep">EP</label>
+            <input type="radio" id="album" name="type" value="album">
+            <label for="album">Album</label>
+          </div>
+          <div class='grid'>
+            <label> Description: </label>
+            <textarea  name="description" id="description" class="inputForm"></textarea>
+          </div>
+          <div class='grid track'>
+            <label> Tracks: </label>
+            <input type="text" name="track" class="inputForm"/>
+            <input type="text" name="track" class="inputForm"/>
+            <input type="text" name="track" class="inputForm"/>
+            <input type="text" name="track" class="inputForm"/>
+            <input type="text" name="track" class="inputForm"/>
+            <input type="text" name="track" class="inputForm"/>
+            <input type="text" name="track" class="inputForm"/>
+            <input type="text" name="track" class="inputForm"/>
+            <input type="text" name="track" class="inputForm"/>
+          </div>
+          <input type="submit" value="Submit">
+      </form>
+  </body>
+</html>

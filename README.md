@@ -15,6 +15,10 @@ class.
   - [Grid Layout](https://www.w3schools.com/css/css_grid.asp)
 - CSS Framework: [Bootstrap](https://getbootstrap.com/)
 
+## JavaScript
+
+- Book: [Eloquent Javascript](https://eloquentjavascript.net/)
+
 ## Software
 
 We aim for using tools that work across platforms.

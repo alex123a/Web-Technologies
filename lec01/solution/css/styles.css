@@ -1,0 +1,12 @@
+form {
+  display: inline-grid;
+  grid-row-gap: 16px;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid.track {
+  grid-row-gap: 5px;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">    <!-- specifies encoding -->
+    <title>Album library</title>
+    <script>
+      function addElement() {
+        let para = document.createElement("p");
+        let tnode = document.createTextNode("text");
+        para.appendChild(tnode);
+        document.body.appendChild(para);
+      }
+
+      function removeElement() {
+        let elem = document.getElementById("remove");
+        document.body.removeChild(elem);
+      }
+
+      function alterElement() {
+        para = document.getElementbyId("alter");
+        para.innerHTML = "HI!";
+      }
+    </script>
+  </head>
+  <body>
+      <p id="remove" style="background-color: red"> I am going to be removed</p>
+      <p id="alter" style="background-color: yellow"> I am going to be altered</p>
+  </body>
+</html>
