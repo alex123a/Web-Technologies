@@ -1,13 +1,15 @@
 <html>
     <head>
         <link rel = "stylesheet" type = "text/css" href = "css\style.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="index.js"></script>
         <title>Fill the album form</title>
     </head>
 
     <body>
         <form>
             <label>Name:</label>
-            <input type="text" name="name"><br><br>
+            <input type="text" name="name" placeholder="Bent"><br><br>
             
             <label>Release year:</label>
             <input type="number" name="release_date"><br><br>
@@ -31,17 +33,16 @@
             <textarea id="description_text_area" name="description" rows="3" cols="60"></textarea><br><br>
 
             <label>Tracks</label><br>
-            <input type="text" name="song1"><br>
-            <input type="text" name="song2"><br>
-            <input type="text" name="song3"><br>
-            <input type="text" name="song4"><br>
-            <input type="text" name="song5"><br>
-            <input type="text" name="song6"><br>
-            <input type="text" name="song7"><br>
-            <input type="text" name="song8"><br>
-            <input type="text" name="song9"><br>
-            <input type="text" name="song10"><br>
-
+            <div id="tracks">
+                <div id="track1">
+                    <input name="track1">
+                    <button class="removeTrack" id="removetrack1" type="button">X</button>
+                </div>
+            </div>
+            <!-- id is for identifying the button and type="submit" is for the -->
+            <!-- form to know when to send the data -->
+            <button id="addTrack" type="button">Add</button>
+            <button type="submit">Submit</button>
         </form>
     </body>
 </html>
