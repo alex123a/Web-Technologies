@@ -8,26 +8,37 @@
 
     <body>
         <form>
-            <label>Name:</label>
-            <input type="text" name="name" placeholder="Bent"><br><br>
+            <div id="nameDiv">
+                <label>Name:</label>
+                <input id="nameID" type="text" name="name" placeholder="Bent">
+                <span id="nameSpan"></span><br><br>
+            </div>
+
+            <div id="yearDiv">
+                <label>Release year:</label>
+                <input id="releaseID" type="number" name="release_date" placeholder="2003">
+                <span id="releaseSpan"></span><br><br>
+            </div>
+
+            <div id="artistDiv">
+                <label>Select artist:</label>
+                <select name="artist" id="artist">
+                    <option value="alex">Alex</option>
+                    <option value="max">Max</option>
+                    <option value="mikkel">Mikkel</option>
+                </select>
+                <span id="artistSpan"></span><br><br>
+            </div>
             
-            <label>Release year:</label>
-            <input type="number" name="release_date"><br><br>
-            
-            <label>Select artist:</label>
-            <select name="artist" id="artist">
-                <option value="alex">Alex</option>
-                <option value="max">Max</option>
-                <option value="mikkel">Mikkel</option>
-            </select><br><br>
-            
-            <label>Select song type:</label><br>
-            <label>Single</label>
-            <input type="radio" id="single" name="song_type" value="single"><br>
-            <label>EP</label>
-            <input type="radio" id="ep" name="song_type" value="ep"><br>
-            <label>Album</label>
-            <input type="radio" id="album" name="song_type" value="album"><br><br>
+            <div id="songtypeDiv">
+                <label>Select song type:</label><br>
+                <label>Single</label>
+                <input type="radio" id="single" name="song_type" value="single"><br>
+                <label>EP</label>
+                <input type="radio" id="ep" name="song_type" value="ep"><br>
+                <label>Album</label>
+                <input type="radio" id="album" name="song_type" value="album"><br><br>
+            </div>
 
             <label>Description:</label><br>
             <textarea id="description_text_area" name="description" rows="3" cols="60"></textarea><br><br>
@@ -36,13 +47,13 @@
             <div id="tracks">
                 <div id="track1">
                     <input name="track1">
-                    <button class="removeTrack" id="removetrack1" type="button">X</button>
                 </div>
+                <span id="tracksID"></span>
             </div>
             <!-- id is for identifying the button and type="submit" is for the -->
             <!-- form to know when to send the data -->
             <button id="addTrack" type="button">Add</button>
-            <button type="submit">Submit</button>
+            <button id="submitBut" type="submit">Submit</button>
         </form>
     </body>
 </html>
