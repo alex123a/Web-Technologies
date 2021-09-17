@@ -48,6 +48,18 @@ $( document ).ready(function() {
 
         if (notFilled) {
             event.preventDefault();
+        } else {
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                url: "http://localhost:8000/",
+                // contentType: "application/json; charset=utf-8",
+                data: JSON.stringify({name: $("#nameID").val()}),
+                success: function() {console.log("Sejr!")},
+                error: function (err) {
+                    console.log(err);
+                }
+            });
         }
     })
 
