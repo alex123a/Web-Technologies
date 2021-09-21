@@ -33,6 +33,36 @@ $( document ).ready(function() {
         }
     })
 
+    // $("#submitBut").on("click", function() {
+    //     notFilled = false;
+    //     resetSpans();
+    //     if (!($("#nameID").first().val().length > 0)) {
+    //         $("#nameSpan").text("Please enter your name!").show();
+    //         notFilled = true;
+    //     }
+
+    //     if (!($("#releaseID").first().val() >= 1800 & $("#releaseID").first().val() <= 2021)) {
+    //         $("#releaseSpan").text("Please enter valid release year!").show();
+    //         notFilled = true;
+    //     }
+
+    //     if (notFilled) {
+    //         event.preventDefault();
+    //     } else {
+    //         $.ajax({
+    //             type: "POST",
+    //             dataType: "json",
+    //             url: "http://localhost:8000/",
+    //             contentType: "application/json; charset=utf-8",
+    //             data: JSON.stringify({name: $("#nameID").val()}),
+    //             success: function() {console.log("Sejr!")},
+    //             error: function (err) {
+    //                 console.log(err);
+    //             }
+    //         });
+    //     }
+    // })
+
     $("form").on("submit", function() {
         notFilled = false;
         resetSpans();
@@ -53,7 +83,7 @@ $( document ).ready(function() {
                 type: "POST",
                 dataType: "json",
                 url: "http://localhost:8000/",
-                // contentType: "application/json; charset=utf-8",
+                contentType: "application/json; charset=utf-8",
                 data: JSON.stringify({name: $("#nameID").val()}),
                 success: function() {console.log("Sejr!")},
                 error: function (err) {
