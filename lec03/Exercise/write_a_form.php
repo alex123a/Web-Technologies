@@ -23,9 +23,10 @@
             <div id="artistDiv">
                 <label>Select artist:</label>
                 <select name="artist" id="artist">
-                    <option value="alex">Alex</option>
-                    <option value="max">Max</option>
-                    <option value="mikkel">Mikkel</option>
+                    <?php $artists = ["Alex", "Max", "Mikkel", "Børge"]; ?>
+                    <?php foreach ($artists as $artist): ?>
+                        <option value="<?php echo "".$artist; ?>"><?php echo "".$artist; ?></option>
+                    <?php endforeach; ?>
                 </select>
                 <span id="artistSpan"></span><br><br>
             </div>
@@ -46,7 +47,7 @@
             <label>Tracks</label><br>
             <div id="tracks">
                 <div id="track1">
-                    <input name="track1">
+                    <input name="track[]">
                 </div>
                 <span id="tracksID"></span>
             </div>
