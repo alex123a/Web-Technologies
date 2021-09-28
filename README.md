@@ -19,6 +19,14 @@ class.
 
 - Book: [Eloquent Javascript](https://eloquentjavascript.net/)
 
+## PHP
+
+- Laravel Book: [Laravel up and running](https://laravelupandrunning.com/)
+- Laravel Documentation: [Laravel Official documentation](https://laravel.com/docs/8.x)
+- Installing Laravel:
+  - [Windows](https://www.youtube.com/watch?v=NgZDw8Ravvg)
+  - [Ubuntu](https://www.youtube.com/watch?v=YsqTZfeo_jk)
+
 ## Software
 
 We aim for using tools that work across platforms.
