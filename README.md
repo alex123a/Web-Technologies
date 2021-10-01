@@ -23,6 +23,7 @@ class.
 
 - Laravel Book: [Laravel up and running](https://laravelupandrunning.com/)
 - Laravel Documentation: [Laravel Official documentation](https://laravel.com/docs/8.x)
+- Laracast: [Laracast Laravel 8 From Scratch](https://laracasts.com/series/laravel-8-from-scratch/episodes/13)
 - Installing Laravel:
   - [Windows](https://www.youtube.com/watch?v=NgZDw8Ravvg)
   - [Ubuntu](https://www.youtube.com/watch?v=YsqTZfeo_jk)
