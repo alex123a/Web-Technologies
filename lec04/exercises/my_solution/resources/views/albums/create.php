@@ -25,7 +25,7 @@
                 <label>Select artist:</label>
                 <select name="artist" id="artist">
                     <?php foreach ($artists as $artist): ?>
-                        <option value="<?php echo "".$artist; ?>"><?php echo "".$artist["name"]; ?></option>
+                        <option value="<?php echo "".$artist["id"]; ?>"><?php echo "".$artist["name"]; ?></option>
                     <?php endforeach; ?>
                 </select>
                 <span id="artistSpan"></span><br><br>

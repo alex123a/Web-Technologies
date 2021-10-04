@@ -20,8 +20,8 @@ class CreateArtistsTable extends Migration
         });
 
         Schema::table('albums', function (Blueprint $table) {
-            $table->unsignedBigInteger('artist_id');
-            $table->foreign('artist_id')->references('id')->on('albums')->onDelete('cascade');
+            $table->unsignedBigInteger('artists_id');
+            $table->foreign('artists_id')->references('id')->on('artists')->onDelete('cascade');
         });
     }
 

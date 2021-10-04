@@ -18,7 +18,7 @@ class CreateAlbumsTable extends Migration
             $table->timestamps();
             $table->string('name');
             $table->integer('year');
-            $table->integer('type');
+            $table->text('type');
             $table->text('description');
             $table->json('tracks');
         });

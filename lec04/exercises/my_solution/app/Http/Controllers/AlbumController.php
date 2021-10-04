@@ -20,7 +20,7 @@ class AlbumController extends Controller
         $album->year = request("release_date");
         $album->type = request("song_type");
         $album->description = request("description");
-        $album->tracks = request("tracks");
+        $album->tracks = request("track");
         $album->artists()->associate($artist);
 
         $album->save();
@@ -28,6 +28,14 @@ class AlbumController extends Controller
     }
 
     public function index() {
-        return view("albums.index")->with("albums", albums::all());
+        $albums = albums::all();
+        $albums2 = array();
+        foreach ($albums as $album) {
+            $album["artist"] = artists::find($album["artists_id"])["name"];
+            array_push($albums2, $album);
+        }
+
+        // It does the same as the view in create function. Here it just sent the albums instead of artists
+        return view("albums.index")->with("albums", $albums2);
     }
 }
