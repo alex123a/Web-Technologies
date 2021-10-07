@@ -54,8 +54,7 @@ class AlbumsController extends Controller
         // Gate::authorize('show-album', $album);
         $countVisit = session()->get('counter', 0);
         $countVisit++;
-        $albums = [$album->id => $album->name];
-        return view('albums.index')->with('albums', $albums)->with('countVisit', $countVisit);
+        return view('albums.index')->with('albums', [$album])->with('countVisit', $countVisit);
     }
 
     public function showAuthPolicy(Album $album){
@@ -65,7 +64,6 @@ class AlbumsController extends Controller
         Gate::authorize('show', $album);
         $countVisit = session()->get('counter', 0);
         $countVisit++;
-        $albums = [$album->id => $album->name];
-        return view('albums.index')->with('albums', $albums)->with('countVisit', $countVisit);
+        return view('albums.index')->with('albums', [$album])->with('countVisit', $countVisit);
     }
 }
