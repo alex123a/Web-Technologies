@@ -8,6 +8,12 @@
 
     <body>
         <div>
+            <form method="POST" action="<?php echo route("logout") ?>">
+                <?php echo csrf_field() ?>
+                <button type="submit">Logout</button>
+            </form>
+        </div>
+        <div>
             <h1>Home for albums!</h1><br>
             <a href="<?php echo route("albums.create") ?>">Add Album</a>
             <div>
