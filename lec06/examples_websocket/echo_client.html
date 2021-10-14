@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            const ws = new WebSocket('ws://localhost:8080');
+            ws.onopen = function() {
+                console.log("connected");
+            };
+            ws.onmessage = function(event) {
+                console.log('received: %s', event.data);
+            };
+        </script>
+    </head>
+</html>
