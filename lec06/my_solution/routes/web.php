@@ -41,6 +41,8 @@ Route::post("/artists/store", [ArtistController::class, "store"])->name("artists
 
 Route::get("/albums/getAlbums", [AlbumController::class, "getAlbums"])->name("albums.getAlbums");
 
+Route::get("/albums/numOfNewAlbums/{num_of_albums}", [AlbumController::class, "numOfNewAlbums"])->name("albums.numOfNewAlbums");
+
 Route::post("/albums/deleteAlbum/{id}", [AlbumController::class, "delete"])->name("albums.deleteAlbum");
 
 // Route::get("/login", [UserController::class, "login"])->name("user.login");

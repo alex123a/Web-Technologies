@@ -6,15 +6,20 @@
         <title>Home</title>
         <script>
             $( document ).ready(function() {
+                var albums_start = 0;
                 function getAlbumsController() {
                     $.ajax({
                         url: "<?php echo route("albums.getAlbums") ?>",
+                        async: false,
                         success: function(data) {
                             $("#numberOfAlbumsDiv").empty();
                             $("#albumsDiv").empty();
 
                             let albumsNumberHeader = "<h2>Number of albums created in this session:</h2>";
                             let numberOfAlbums = data[1];
+
+                            albums_start = numberOfAlbums;
+
                             $("#numberOfAlbumsDiv").append(albumsNumberHeader);
                             $("#numberOfAlbumsDiv").append(numberOfAlbums);
 
@@ -45,6 +50,7 @@
                             }
                         },
                         always: function() {
+                            // This part doesn't work since the code under should be out from the Ajax.
                             setTimeout(function() { 
                                 getAlbumsController(); 
                             }, 800);
@@ -65,6 +71,23 @@
                         }
                     });
                 }
+
+                function alertMessage() {
+                    console.log("fuck");
+                    $.ajax({
+                        url: "albums/numOfNewAlbums/" + albums_start,
+                        async: false,
+                        success: function(data) { 
+                            if (data[0] > 0) {
+                                alert("Number of new albums: " + data[0]);
+                            }
+                        }
+                    });
+                    setTimeout(function() { 
+                        alertMessage(); 
+                    }, 5000);
+                }
+                alertMessage();
 
                 $("#albumsDiv").on("click", "button", function() {
                     let parentId = $(this).parent().attr("id");

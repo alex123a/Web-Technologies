@@ -50,6 +50,10 @@ class AlbumController extends Controller
         return $returnData;
     }
 
+    public function numOfNewAlbums($num_of_albums) {
+        return session()->get('albumCounter', 0) - $num_of_albums;
+    }
+
     public function delete($id) {
         albums::find($id)->delete();
     }
