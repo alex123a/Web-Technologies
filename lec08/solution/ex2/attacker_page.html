@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://localhost:8000/albums/create -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- specifies encoding -->
+    <title>Album library</title>
+    <link rel="stylesheet" href="./attacker/all.css">
+    <script src="./attacker/jquery.min.js"></script>
+    <script src="./attacker/ex02.js"></script><script data-dapp-detection="">!function(){let e=!1;function n(){if(!e){const n=document.createElement("meta");n.name="dapp-detected",document.head.appendChild(n),e=!0}}if(window.hasOwnProperty("ethereum")){if(window.__disableDappDetectionInsertion=!0,void 0===window.ethereum)return;n()}else{var t=window.ethereum;Object.defineProperty(window,"ethereum",{configurable:!0,enumerable:!1,set:function(e){window.__disableDappDetectionInsertion||n(),t=e},get:function(){if(!window.__disableDappDetectionInsertion){const e=arguments.callee;e&&e.caller&&e.caller.toString&&-1!==e.caller.toString().indexOf("getOwnPropertyNames")||n()}return t}})}}();</script>
+    <script src="./attacker/ex01.js"></script>
+    <script src="./attacker/ex04.js"></script>
+
+    <link rel="stylesheet" href="./attacker/app.css">
+  </head>
+  <body>
+      <h1>New Album</h1>
+      
+      <form action="http://localhost:8000/albums" method="POST">
+          <div class="grid inputGroup">
+            <label> Name: </label>
+            <input type="text" name="name" id="name" class="inputForm">
+            <div class="invalid-feedback">Please provide a valid name.</div>
+          </div>
+          <div class="grid inputGroup">
+            <label> Year: </label>
+            <input type="number" name="year" id="year" class="inputForm">
+            <div class="invalid-feedback">Please provide a valid year.</div>
+          </div>
+          <div class="grid inputGroup">
+            <label> Artist: </label>
+            <select name="artist" id="artist" class="inputForm">
+                            <option value="1">Low Roar</option>
+                          </select>
+            <div class="invalid-feedback">Please provide a valid name.</div>
+          </div>
+          <div class="inputGroup">
+            <input type="radio" id="single" name="type" value="1">
+            <label for="single">Single</label>
+            <input type="radio" id="ep" name="type" value="2">
+            <label for="ep">EP</label>
+            <input type="radio" id="album" name="type" value="3">
+            <label for="album">Album</label>
+            <div class="invalid-feedback">Please provide a valid type.</div>
+          </div>
+          <div class="grid">
+            <label> Description: </label>
+            <textarea name="description" id="description" class="inputForm"></textarea>
+          </div>
+          <div class="grid tracks inputGroup">
+            <label> Tracks: </label>
+            <div class="grid inputs">
+              <div class="track">
+                <input type="text" name="tracks[]" class="inputForm">
+                <button class="remove" type="button" disabled="disabled">Remove</button>
+              </div>
+            </div>
+            <button type="button" class="add">Add</button>
+            <div class="invalid-feedback">Please provide at least one track.</div>
+          </div>
+          <input type="submit" value="Submit">
+      </form>
+  
+
+</body></html>
