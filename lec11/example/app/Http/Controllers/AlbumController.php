@@ -30,8 +30,12 @@ class AlbumController extends Controller
     public function index() {
         $out = new \Symfony\Component\Console\Output\ConsoleOutput();
         $out->writeln("Index");
-        return view("albums.index")->with("albums", Album::all());
-        // return view("albums.index")->with("albums", Album::with('artist')->get());
+        return view("albums.index")
+                    ->with("albums", Album::all())
+                    ->with("count", Album::count());
+        // return view("albums.index")
+        //             ->with("albums", Album::with('artist')->get())
+        //             ->with("count", Album::count());
     }
 
     public function indexCache() {

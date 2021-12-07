@@ -13,7 +13,7 @@
       <h1>Welcome!</h1>
 
       <div>
-        <h2>Albums</h2>
+        <h2>Albums #<?php echo $count?></h2>
         <div id='albums'>
           <?php if(empty($albums)): ?>
             <p>No albums found :(</p>
